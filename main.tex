@@ -270,14 +270,20 @@
         21         & 22.326
         \end{tabular}
         \end{table}
-        More recent results combining FHE + NNs as can be seen in fig \ref{fig:cnn_cg} adjacent.
+        More recent results combining FHE + CNN + ANN as can be seen in fig \ref{fig:cnn_cg} adjacent.
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{figure}[th!]
           \centering
-          \includegraphics[width=1\textwidth]{neuron_computational_graph.pdf}
-          \caption{Artificial Neural Network (ANN) neuron computational graphs. \autocite{repository}}
+          \includegraphics[width=0.7\textwidth]{cnn_computational_graph.pdf}
+          \caption{FHE compatible convolutional neural network. \autocite{repository}}
           \label{fig:cnn_cg}
+        \end{figure}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.7\textwidth]{dense_computational_graph.pdf}
+          \caption{FHE compatible ANN/ Dense neural network. \autocite{repository}}
+          \label{fig:ann_cg}
         \end{figure}
       \end{column}
     \end{columns}
@@ -288,9 +294,11 @@
     \frametitle{Future Work}
     \begin{columns}
       \begin{column}{0.5\textwidth}
-        How do you account for:
+        Starting to wrap everything up:
         \begin{itemize}
-          \item High variance between crops, crop locations, and varieties
+          \item Certainty metrics need implementing: Ensemble neural networks / Bayesian inference
+          \item More papers are on their way/ imminent; Describe work thus far in greater detail
+          \item Thesis!
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -329,6 +337,32 @@
           \caption{QR code to this presentation for questions, and to my GitHub for projects. \autocite{repository}}
           \label{fig:qr}
         \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+
+% ----- REFERENCES PAGE
+  \begin{frame}
+    \frametitle{Thanks}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        Thanks to all of my supervisors:
+        \begin{itemize}
+          \item Georgios Leontidis
+          \item Marc Hanheide
+          \item Mark Else
+          \item Richard Harnden
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        Also thanks to the following:
+        \begin{itemize}
+          \item University of Lincoln (UoL)
+          \item Berry Gardens Growers (BGG)
+          \item National Institute of Agricultural Botany, East Malling Research (NIAB EMR)
+          \item Biotechnology and Biological Sciences Research Council (BBSRC)
+        \end{itemize}
       \end{column}
     \end{columns}
   \end{frame}
