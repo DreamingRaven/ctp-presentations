@@ -136,7 +136,7 @@
         How do you account for:
         \begin{itemize}
           \item High variance between crops, crop locations, and varieties
-          \item High variance in behaviour of a single crop over a season
+          \item High variance in behavior of a single crop over a season
           \item High variance between growers
         \end{itemize}
       \end{column}
@@ -187,7 +187,7 @@
         I work with:
         \begin{itemize}
           \item Deep Learning
-          \item Fully Homomorphic Encryption
+          \item Fully Homomorphic Encryption \autocite{gentry2009fully}
         \end{itemize}
         Applied to:
         \begin{itemize}
@@ -195,7 +195,7 @@
         \end{itemize}
         Goals:
         \begin{itemize}
-          \item Accurateley predict yield
+          \item Accurately predict yield
           \item Provide certainty in predictions for agronomist focus and re-prediction
           \item Privacy-preservation
         \end{itemize}
@@ -206,6 +206,99 @@
           \includegraphics[angle=-90,origin=c,width=0.55\textwidth]{wasp.jpg}
           \caption{Strawberry tabletop with a wasp having some lunch. \autocite{repository}}
           \label{fig:wasp}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+% ----- DEEP LEARNING PAGE
+  \begin{frame}
+    \frametitle{Deep Learning + Fully Homomorphic Encryption}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        Using:
+        \begin{itemize}
+          \item Deep learning/ neural networks
+          \begin{itemize}
+            \item Accurate predictions
+            \item Timely manner
+            \item Self assess certainty
+            \item Adapt to various scenarios
+          \end{itemize}
+          \item Fully Homomorphic Encryption
+          \begin{itemize}
+            \item Process cyphertexts directly without the keys to them
+            \item Quantum resistant mathematical problem (ring learning with errors)
+            \item Process floating point numbers (CKKS \autocite{ckks})
+          \end{itemize}
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.8\textwidth]{neuron_computational_graph.pdf}
+          \caption{Artificial Neural Network (ANN) neuron computational graphs. \autocite{repository}}
+          \label{fig:ann_cg}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+% ----- RESULTS PAGE
+  \begin{frame}
+    \frametitle{Results}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+
+        \begin{table}[h]
+        \begin{tabular}{lc}
+          \hline
+          Technique & MAE\\ \hline
+          Recurrent Neural Networks       & 0.210     \\ % 14.2 / 67.52173913043478
+          Long Short-Term Memory     & 0.381     \\ % 25.7 / 67.52
+          Gated Recurrent Units       & 0.155     \\ \hline % 10.5 / 67.52
+          \end{tabular}
+          \label{tab:results}
+        \end{table}
+        Initial results trialing different sorts of neural networks for 2 week predictions.
+
+        \begin{table}[h]
+        \begin{tabular}{ll}
+        Days Ahead & \begin{tabular}[c]{@{}l@{}}MAPE\end{tabular} \\ \hline
+        7          & 8.001                                                                               \\
+        14         & 14.669                                                                              \\
+        21         & 22.326
+        \end{tabular}
+        \end{table}
+        More recent results combining FHE + NNs as can be seen in fig \ref{fig:cnn_cg} adjacent.
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{neuron_computational_graph.pdf}
+          \caption{Artificial Neural Network (ANN) neuron computational graphs. \autocite{repository}}
+          \label{fig:cnn_cg}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+% ----- FUTURE WORK PAGE
+  \begin{frame}
+    \frametitle{Future Work}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        How do you account for:
+        \begin{itemize}
+          \item High variance between crops, crop locations, and varieties
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.22\textwidth]{hal9000.pdf}
+          \caption{Hal 9000, a space odyssey.}
+          \label{fig:hal}
         \end{figure}
       \end{column}
     \end{columns}
@@ -233,7 +326,7 @@
         \begin{figure}[th!]
           \centering
           \includegraphics[width=0.5\textwidth]{qrcode.png}
-          \caption{QR code to this presentation for questions, and to my github for projects. \autocite{repository}}
+          \caption{QR code to this presentation for questions, and to my GitHub for projects. \autocite{repository}}
           \label{fig:qr}
         \end{figure}
       \end{column}
