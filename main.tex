@@ -1,0 +1,79 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz} % for QR code overlay
+
+% code snippets
+\usepackage{minted}
+\newmintedfile[dockercode]{dockerfile}{
+  % bgcolor=mintedbackground,
+  fontfamily=tt,
+  linenos=true,
+  numberblanklines=true,
+  numbersep=5pt,
+  gobble=0,
+  frame=leftline,
+  framerule=0.4pt,
+  framesep=2mm,
+  funcnamehighlighting=true,
+  tabsize=4,
+  obeytabs=false,
+  mathescape=false
+  samepage=false, %with this setting you can force the list to appear on the same page
+  showspaces=false,
+  showtabs =false,
+  texcl=false,
+}
+\newminted[bashcode]{bash}{
+  % bgcolor=mintedbackground,
+  fontfamily=tt,
+  linenos=true,
+  numberblanklines=true,
+  numbersep=5pt,
+  gobble=0,
+  frame=leftline,
+  framerule=0.4pt,
+  framesep=2mm,
+  funcnamehighlighting=true,
+  tabsize=4,
+  obeytabs=false,
+  mathescape=false
+  samepage=false, %with this setting you can force the list to appear on the same page
+  showspaces=false,
+  showtabs =false,
+  texcl=false,
+}
+
+% biblatex (requires biber; sudo pacman -S biber)
+\usepackage[]{biblatex} % biblatex
+\addbibresource{./src/bib/fhe.bib}
+\addbibresource{./src/bib/dl.bib}
+\addbibresource{./src/bib/misc.bib}
+
+\usepackage{graphicx}
+\graphicspath{ {./src/img/} }
+
+\usetheme{Boadilla}
+\usecolortheme{rose}
+% \beamerdefaultoverlayspecification{<+->} % this will turn it into slides
+
+\title{Privacy-Preserving Encrypted Deep Learning}
+\subtitle{Fully Homomorphic Encryption}
+\author{George Onoufriou\\University of Lincoln}
+\date{\today}
+
+\begin{document}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1.5cm]{qrcode.png}};
+\end{tikzpicture}}
+
+  \frame{\titlepage}
+
+  \begin{frame}[allowframebreaks]
+    \frametitle{References}
+    % % biblatex version
+    \printbibliography
+  \end{frame}
+
+\end{document}

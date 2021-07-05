@@ -11,10 +11,10 @@ latexmk -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error -pdf 
 echo "** cleaning up:"
 latexmk -c
 echo "** organising builds dir:"
-mkdir -p builds
-rm -f builds/*.pdf
-echo "** copying:"
+mkdir -p build
+rm -f build/*.pdf
+echo "** copying from ${PWD} to ${PWD}/build:"
 ls -al *.pdf
-cp *.pdf builds/.
+cp *.pdf build/.
 echo "** ending-state:"
 ls -al
